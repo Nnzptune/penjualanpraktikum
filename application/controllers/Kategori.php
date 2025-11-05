@@ -13,7 +13,6 @@ class Kategori extends CI_Controller {
     {
         $data = array(
             'title' => 'View Data Kategori',
-            'userlog' => $this->infoLogin(),
             'kategori' => $this->Kategori_model->getAll(),
             'content' => 'kategori/index'
         );
@@ -52,5 +51,11 @@ class Kategori extends CI_Controller {
     }
     redirect('kategori');
     }
+    function delete($id)
+    {
+    $this->Kategori_model->delete($id);
+    redirect('kategori');
+    }
+
 
 }
