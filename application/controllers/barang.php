@@ -14,7 +14,10 @@ class Barang extends CI_Controller {
     {
         $data = array(
             'title' => 'Dashboard',
+<<<<<<< HEAD
             'userlog' => infoLogin(),
+=======
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
             'barang' => $this->Barang_model->getAll(),
             'content' => 'barang/index'
         );

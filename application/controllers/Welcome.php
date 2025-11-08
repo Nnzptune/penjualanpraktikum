@@ -24,14 +24,24 @@ class Welcome extends CI_Controller {
 	}
 	public function about()
 	{
+<<<<<<< HEAD
+=======
+		//fungsi untuk me load view about.php
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
 		$this->load->view('about');
 	}
 	public function profile()
 	{
+<<<<<<< HEAD
 		$this->load->view('profile');
 	}
 	public function menu()
 	{
 		$this->load->view('menu');
 	}
+=======
+		//fungsi untuk meload view contact.php
+		$this->load->view('profile');
+	}
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
 }

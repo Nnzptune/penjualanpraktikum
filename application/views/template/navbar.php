@@ -1,4 +1,8 @@
+<<<<<<< HEAD
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+=======
+       <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
             <!-- Sidebar Toggle-->

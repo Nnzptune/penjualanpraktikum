@@ -2,24 +2,39 @@
     <div class="container-fluid">
         <h1 class="mt-4"></h1>
         <ol class="breadcrumb mb-4">
+<<<<<<< HEAD
             <li class="breadcrumb-item">
                 <a href="<?php echo site_url('user') ?>">User</a>
             </li>
+=======
+            <li class="breadcrumb-item"><a href="<?php echo site_url('user') ?>">User</a></li>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
             <li class="breadcrumb-item active"><?php echo $title ?></li>
         </ol>
 
         <div class="card mb-4">
             <div class="card-body">
                 <form action="<?php echo site_url('user/save') ?>" method="post">
+<<<<<<< HEAD
 
                     <div class="mb-3">
                         <label for="nik">NIK</label>
+=======
+                    
+                    <div class="mb-3">
+                        <label for="nik">NIK <code>*</code></label>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
                         <input class="form-control" type="text" name="nik" placeholder="NIK" required />
                     </div>
 
                     <div class="mb-3">
+<<<<<<< HEAD
                         <label for="username">USERNAME</label>
                         <input class="form-control <?php echo form_error('username') ? 'is-invalid' : '' ?>" 
+=======
+                        <label for="username">USERNAME <code>*</code></label>
+                        <input class="form-control <?php echo form_error('username') ? 'is-invalid' : ''; ?>" 
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
                                type="text" name="username" placeholder="USERNAME" required />
                         <div class="invalid-feedback">
                             <?php echo form_error('username') ?>
@@ -27,7 +42,11 @@
                     </div>
 
                     <div class="mb-3">
+<<<<<<< HEAD
                         <label for="full_name">FULL NAME</label>
+=======
+                        <label for="full_name">FULL NAME <code>*</code></label>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
                         <input class="form-control" type="text" name="full_name" placeholder="FULL NAME" required />
                     </div>
 
@@ -47,7 +66,11 @@
                     </div>
 
                     <div class="mb-3">
+<<<<<<< HEAD
                         <label for="password">PASSWORD</label>
+=======
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">PASSWORD</label>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
                         <input type="password" class="form-control" id="password" name="password" autocomplete="off" placeholder="PASSWORD" required />
                     </div>
 
@@ -67,6 +90,10 @@
                 </form>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
         <div style="height: 100vh"></div>
     </div>
 </main>

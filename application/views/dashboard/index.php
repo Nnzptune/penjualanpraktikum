@@ -1,4 +1,8 @@
+<<<<<<< HEAD
                 <main>
+=======
+ <main>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Static Navigation</h1>
                         <ol class="breadcrumb mb-4">
@@ -19,5 +23,9 @@
                         <div style="height: 100vh"></div>
                         <div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>
                     </div>
+<<<<<<< HEAD
                 </main>
                 
+=======
+                </main>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f

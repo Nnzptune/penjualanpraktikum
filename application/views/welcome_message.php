@@ -79,7 +79,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
+<<<<<<< HEAD
 	<h1>Welcome to OENISKA CodeIgniter!</h1>
+=======
+	<h1>Welcome to UNISKA MAB </h1>
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>

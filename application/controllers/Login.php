@@ -1,8 +1,14 @@
 <?php
+<<<<<<< HEAD
 defined('BASEPATH') or exit('No direct script access allowed');
 class Login extends CI_Controller
 {
 
+=======
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Login extends CI_Controller
+{
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
     public function __construct()
     {
         parent::__construct();
@@ -12,6 +18,7 @@ class Login extends CI_Controller
     public function index()
     {
         $this->form_validation->set_rules('email', 'email', 'required|trim');
+<<<<<<< HEAD
         $this->form_validation->set_rules('password', 'password', 'required|trim');
 
         $this->load->view('login/index');
@@ -40,6 +47,30 @@ class Login extends CI_Controller
                     $this->_updateLastLogin($userid);
                     redirect('menu');
                 } else if ($user['role'] == 'ADMIN') {
+=======
+        $this->form_validation->set_rules('password', 'Password', 'required|trim');
+
+        $this->load->view('login/index');
+    }
+    public function dologin()
+    {
+        $user = $this->input->post('email');
+        $pswd = $this->input->post('password');
+        $user = $this->db->get_where('user', ['email' => $user])->row_array(); // cari user berdasarkan email
+        if ($user) { // jika user terdaftar
+            if (password_verify($pswd, $user['password'])) { // periksa password-nya
+                $data = [
+                    'id'       => $user['id'],
+                    'email'    => $user['email'],
+                    'username' => $user['username'],
+                    'role'     => $user['role']
+                ]; $userid = $user['id'];
+                $this->session->set_userdata($data);
+                if ($user['role'] == 'PEMILIK') { // periksa role-nya
+                    $this->_updateLastLogin($userid);
+                    redirect('menu');
+                } elseif ($user['role'] == 'ADMIN') {
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
                     $this->_updateLastLogin($userid);
                     redirect('user');
                 } elseif ($user['role'] == 'KASIR') {
@@ -50,6 +81,7 @@ class Login extends CI_Controller
                 }
             } else { // jika password salah
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><b>Error :</b> Password Salah.</div>');
+<<<<<<< HEAD
                 redirect('login');
             }
         } else { // jika user tidak terdaftar
@@ -68,12 +100,42 @@ class Login extends CI_Controller
         $this->session->sess_destroy();
         redirect(site_url('login'));
     }
+=======
+                redirect('/');
+            }
+        } else { // jika user tidak terdaftar
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><b>Error :</b> User Tidak Terdaftar.</div>');
+            redirect('/');
+    }}
+    private function _updateLastLogin($userid)
+{
+    $sql = "UPDATE user SET last_login = now() WHERE id = $userid";
+    $this->db->query($sql);
+}
+    public function logout()
+    {
+        // hancurkan semua sesi
+        $this->session->sess_destroy();
+        redirect(site_url('login'));
+    }
+
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
     public function block()
     {
         $data = array(
             'user'  => infoLogin(),
+<<<<<<< HEAD
             'title' => 'Akses Ditolak'
         );
         $this->load->view('login/error404', $data);
     }
 }
+=======
+            'title' => 'Access Denied!'
+        );
+
+        $this->load->view('login/error404', $data);
+    }
+
+}
+>>>>>>> 0bdf5f03fa51e6f3a8636a6c9a86ce671456422f
